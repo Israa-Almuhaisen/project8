@@ -15,7 +15,7 @@ export default function ProfilePicture(props) {
 
   },[]);
   const getDataUsers = () => {
-    axios.get(`http://localhost/Book/BookApp/backend/user.php/users/${current_ID.id}`)
+    axios.get(`http://localhost/project8/BookApp/backend/user.php/users/${current_ID.id}`)
     .then((respone)=>{
       setDataUsers([respone.data])
         // console.log(respone.data ,"bgbgbg");

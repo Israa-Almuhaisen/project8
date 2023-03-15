@@ -19,10 +19,15 @@ export default function Home() {
   }, []);
  
   function getBooks() {
-    axios.get(`http://localhost/Book/BookApp/backend/books.php`)
+    axios.get(`http://localhost/project8/BookApp/backend/books.php`)
       .then((response) => {
         setBooks(response.data);
         console.log(books,'books');
+
+
+
+
+
       })
       .catch((error) => {
         console.log(error);
@@ -73,7 +78,7 @@ export default function Home() {
     {books.map((item, index) => (
                   <div key={index}>
                      <Card style={{ width: '18rem' }}>
-      {/* <Card.Img variant="top" src={'http://localhost/book/BookApp/backend/'+item.cover_image} /> */}
+      {/* <Card.Img variant="top" src={'http://localhost/project8/BookApp/backend/'+item.cover_image} /> */}
       <Card.Body>
         <Card.Title>{item.title}</Card.Title>
         <Card.Title>{item.author}</Card.Title>

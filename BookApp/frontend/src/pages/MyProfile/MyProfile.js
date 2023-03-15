@@ -18,7 +18,7 @@ export default function MyProfile() {
      
   },[]);
   const getDataUsers = () => {
-    axios.get(`http://localhost/Book/BookApp/backend/user.php/users/${current_ID}`)
+    axios.get(`http://localhost/project8/BookApp/backend/user.php/users/${current_ID}`)
     .then((respone)=>{
       setDataUsers([respone.data])
         console.log(respone.data ,"bgbgbg");

@@ -22,8 +22,8 @@ export default function EditProfile() {
     } , [])
 
     function getUser(){
-        // http://localhost/Book/BookApp/backend/user.php/${id}
-        axios.get(`http://localhost/Book/BookApp/backend/user.php/users/${current_ID.id}`)
+        // http://localhost/project8/BookApp/backend/user.php/${id}
+        axios.get(`http://localhost/project8/BookApp/backend/user.php/users/${current_ID.id}`)
         .then(response => {
             console.log(response.data);
             setUser([response.data]);
@@ -48,7 +48,7 @@ export default function EditProfile() {
 
         try {
           const response = await axios.post(
-            `http://localhost/Book/BookApp/backend/editProfile.php/${current_ID.id}`, formEditData
+            `http://localhost/project8/BookApp/backend/editProfile.php/${current_ID.id}`, formEditData
           );
           console.log(response.data,"kiki");
           console.log(formEditData,"aaa");
